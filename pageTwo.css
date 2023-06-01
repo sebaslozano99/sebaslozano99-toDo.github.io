@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+
+
+/* header code */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    background-color: #333;
+    align-items: center;
+    height: 5em;   
+    /* box-shadow: inset 3px 0 10px; */
+}
+
+
+header nav ul{
+    display: flex;
+}
+
+header a{
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+
+}
+
+header a:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+    animation: title 3s;
+}
+
+
+
+header nav ul li a{
+    padding: 0 1em;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+header nav ul li:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+}
+
+/*Here finishes header code */
+
+
+/* here starts container div */
+
+main .container{
+    /* border: 5px solid yellow; */
+    background-color: #333;
+    height: 88vh;
+    width: 100%;
+    display: flex;
+}
+
+main .container .form{
+    padding: 4em;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+main .container .form form{
+    width: 20em;
+    margin: 0 auto;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow:2px 2px 9px #1d1d1d;
+}
+
+main .container .form form:hover{
+    animation: border 2s;
+}
+
+@keyframes border{
+    50%{
+        border:  1px solid #b80a0a;;
+    }
+}
+
+
+main .container .form form:hover{
+    transform: scale(1.2);
+    transition: all .5s;
+    box-shadow: 2px 2px 9px #1d1d1d;
+}
+
+main .container .form form .item{
+    padding: 7px 0;
+}
+
+main .container .form form .item label{
+    color: #fff;
+}
+
+
+
+main .container .work{
+    /* border: 3px solid greenyellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+main .container .work h3{
+    color: #fff;
+    font-size: 3em;
+    padding-bottom: 1em;
+}
+
+main .container .work img{
+    width: 20em;
+}
+
+
+/*media query */
+@media (max-width:1000px){
+    main .container .form{
+        /* border: 3px solid red; */
+        padding: 4em;
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    
+    main .container .form form{
+        /* border: 1px solid brown; */
+        width: 17em;
+        margin: 0 auto;
+        height: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        box-shadow:2px 2px 9px #1d1d1d;
+    
+    }
+
+    main .container .work img{
+        width: 17em;
+    }
+}
+
+
+@media (max-width: 870px){
+    main .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 5em;
+    }
+
+    main .container .form{
+        width: 100%;
+    }
+
+    main .container .form form{
+        width: 15em;
+    }
+
+
+    main .container .work{
+        /* border: 3px solid gold; */
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    header a{
+        color: #fff;
+        font-size: 1.4em;
+        font-weight: bold;
+    
+    }
+
+    header nav ul li a{
+        padding: 0 1em;
+        color: #fff;
+        font-size: 0.7em;
+    }
+
+
+    /* input[type="checkbox"]{
+        font-size: 20em;
+    } */
+
+
+    main .container .work h3{
+        color: #fff;
+        font-size: 1.8em;
+        padding-bottom: 1em;
+    }
+}

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+
+
+/* header code */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    background-color: #333;
+    align-items: center;
+    height: 5em;    
+}
+
+
+header nav ul{
+    display: flex;
+}
+
+header a{
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header a:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+}
+
+header nav ul li a{
+    padding: 0 1em;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+header nav ul li:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+}
+
+/*Here finishes header code */
+
+
+
+/* container code -- section one */
+
+/* main .container{
+    border: 3px solid red;
+} */
+
+main .container .section-one{
+    padding: 5em;
+    background-color: #333;
+    /* border: 3px solid goldenrod; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-rows: auto;
+    gap: 2em;
+}
+
+main .container .section-one .item{
+    /* border: 2px solid gold; */
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 6px #000;
+    border-radius: 1em;
+}
+
+
+main .container .section-one .item:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+    animation: card 2s;
+}
+
+@keyframes card{
+    0%{
+        border: 1px solid #ff0000;
+    }
+
+    50%{
+        border: 2px solid #ff0000;
+    }
+
+}
+
+main .container .section-one .item h3{
+    color: #fff;
+    font-size: 2em;
+}
+
+main .container .section-one .item img{
+    width: 7em;
+}
+
+main .container .section-one .item:hover img{
+    animation: roll 2s;
+}
+
+@keyframes roll{
+    50%{
+        transform: rotate(90deg);
+    }
+}
+
+/* Here ends section-one */
+
+/* Here starts section-two  */
+
+main .section-two{
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid gold; */
+    padding-bottom: 5em;
+}
+
+main .section-two .item{
+    margin-top: 5em;
+    background-color: #333;
+    box-shadow: 1px 1px 6px;
+    border-radius: 2em;
+    width: 80%;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .section-two .item:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+    box-shadow: 3px 3px 9px;
+    animation: card1 2s;
+    cursor: pointer;
+}
+
+@keyframes card1{
+    
+    50%{
+        border: 2px solid #ff0000;
+    }
+
+}
+
+main .section-two .item h3{
+    color: #fff;
+    font-size: 2em;
+}
+
+main .section-two .item img{
+    width: 10em;
+}
+
+
+@media (max-width: 1000px){
+    main .container .section-one{
+        padding: 5em;
+        background-color: #333;
+        /* border: 3px solid goldenrod; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-auto-rows: auto;
+        gap: 2em;
+    }
+}
+
+@media (max-width:700px){
+    main .container .section-one{
+        padding: 5em;
+        background-color: #333;
+        /* border: 3px solid goldenrod; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    header a{
+        color: #fff;
+        font-size: 1.6em;
+        font-weight: bold;
+    
+    }
+
+    header nav ul li a{
+        padding: 0 1em;
+        color: #fff;
+        font-size: 1em;
+    }
+}

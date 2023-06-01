@@ -1,0 +1,52 @@
+ @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+
+
+/* header code */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    background-color: #333;
+    align-items: center;
+    height: 5em;    
+}
+
+
+header nav ul{
+    display: flex;
+}
+
+header a{
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header a:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+}
+
+header nav ul li a{
+    padding: 0 1em;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+header nav ul li:hover{
+    transform: scale(1.05);
+    transition: all .5s;
+}
+
+/*Here finishes header code */
